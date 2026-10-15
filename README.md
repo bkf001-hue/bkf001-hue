@@ -1,25 +1,36 @@
-# 안녕하세요! 반도체 공정·설비와 데이터 분석을 공부하고 있습니다. 👋
+# 반도체 공정·설비 / 데이터 분석
 
-공정 결과를 바로 단정하기보다 **현재 상태를 확인하고, 데이터를 근거로 원인을 구분하며, 검증 가능한 개선 방향을 찾는 과정**을 중요하게 생각합니다.
+반도체 공정과 설비 데이터를 분석하고, Python과 Verilog로 진행한 프로젝트를 정리하고 있습니다.
 
-## 관심 분야
+## Projects
 
-- **Semiconductor Process & Equipment** — 공정 조건과 설비 상태 분석, 이상 원인 파악
-- **Process Data Analysis** — Python을 활용한 공정 데이터 전처리·시각화·모델링
-- **Digital IC Design** — Verilog RTL 설계, Testbench 검증, RTL-to-GDS 흐름 실습
+### 1. PECVD Process Analysis
+**PECVD 공정 데이터 분석 · Python**
 
-## 주요 프로젝트
+설비 센서 로그와 Recipe 조건, 49-point Wafer Map 데이터를 비교했습니다. 공정별 센서 변화와 증착 두께·균일도를 확인하고, 목표 두께에 맞춘 Recipe 개선 방향을 검토한 프로젝트입니다.
 
-| 프로젝트 | 내용 | 저장소 |
-|---|---|---|
-| **Traffic Light & Gate Controller** | Verilog FSM, Timer, PWM, 7-Segment, RTL Testbench 및 GDS 산출물 | [코드 보기](https://github.com/bkf001-hue/total_project_trafficlight_gate) |
-| **PECVD Process Analysis** | 설비 센서·Recipe·Wafer Map 분석을 통한 증착 공정 조건 검토 | Private — 공개 준비 중 |
-| **PECVD FDC / VM Machine Learning** | 공정 데이터 기반 불량 분류 및 두께 예측 모델 비교 | Private — 공개 준비 중 |
+*Private repository — 프로젝트 요약만 공개*
 
-## 활용 도구
+### 2. PECVD FDC / VM Machine Learning
+**공정 불량 분류 및 두께 예측 · Python / Machine Learning**
 
-`Python` · `Pandas` · `NumPy` · `Matplotlib` · `scikit-learn` · `Verilog` · `Icarus Verilog`
+PECVD 데이터를 전처리하고 Random Forest, XGBoost, CatBoost 등 모델을 비교했습니다. FDC 불량 분류에는 Precision·Recall·F1·ROC-AUC를, VM 두께 예측에는 R²·MAE·RMSE를 활용했습니다.
+
+*Private repository — 프로젝트 요약만 공개*
+
+### 3. Traffic Light & Gate Controller
+**디지털 회로 설계 · Verilog**
+
+FSM 기반 신호등 제어 회로를 설계하고 Timer, PWM, 7-Segment 모듈을 연결했습니다. Testbench와 GitHub Actions로 RTL 동작을 확인하고 GDS 산출물을 정리했습니다.
+
+[프로젝트 코드 및 설계 내용](https://github.com/bkf001-hue/total_project_trafficlight_gate)
+
+## Skills & Tools
+
+- **Process data:** Python, Pandas, NumPy, Matplotlib, scikit-learn
+- **Machine learning:** Random Forest, XGBoost, CatBoost
+- **Digital design:** Verilog, Testbench, Icarus Verilog, GitHub Actions
 
 ---
 
-**기록 원칙:** 데이터에서 직접 확인한 사실, 분석에 기반한 가설, 시뮬레이션 결과, 향후 개선 제안을 구분합니다. 교육 프로젝트의 결과를 실제 양산·설비 적용 성과로 표현하지 않습니다.
+*공정 분석 및 머신러닝 프로젝트는 교육·팀 프로젝트로 진행했습니다. 모델 예측이나 Recipe 시뮬레이션을 실제 생산 설비 적용 성과와 구분해 기록했습니다.*
